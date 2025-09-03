@@ -1,8 +1,8 @@
-// app/achievements/page.tsx
+// src/app/achievements/page.tsx
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { Trophy, Medal, Star, Filter, Search, User, Calendar, MapPin } from 'lucide-react';
+import { Trophy, Medal, Star, Search, User, Calendar, MapPin } from 'lucide-react';
 import { achievements } from '@/lib/data';
 
 type FilterType = 'all' | 'local' | 'national' | 'international';

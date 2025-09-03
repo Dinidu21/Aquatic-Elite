@@ -1,4 +1,4 @@
-// app/coach/page.tsx
+// src/app/coach/page.tsx
 import React from 'react';
 import { Award, BookOpen, Users, Target, Clock, Trophy } from 'lucide-react';
 
@@ -28,7 +28,7 @@ export default function CoachPage() {
         {
             icon: Users,
             title: 'Individualized Approach',
-            description: 'No two swimmers are alike. We create personalized training programs that adapt to each athlete\'s unique strengths and areas for improvement.'
+            description: 'No two swimmers are alike. We create personalized training programs that adapt to each athlete&apos;s unique strengths and areas for improvement.'
         },
         {
             icon: Clock,
@@ -126,7 +126,7 @@ export default function CoachPage() {
                             <p className="mb-6">
                                 After retiring from competitive swimming, I pursued my passion for coaching by
                                 obtaining certifications from USA Swimming and the International Swimming Federation.
-                                I've had the privilege of working with athletes at every level, from beginners taking
+                                I&apos;ve had the privilege of working with athletes at every level, from beginners taking
                                 their first strokes to Olympic hopefuls chasing their dreams.
                             </p>
 
@@ -224,9 +224,9 @@ export default function CoachPage() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <blockquote className="text-2xl md:text-3xl font-light text-white mb-8 leading-relaxed">
-                            "Every swimmer who steps into my program isn't just learning to move through water –
-                            they're discovering their potential, building unshakeable confidence, and developing
-                            the mindset of a champion that will serve them for life."
+                            &quot;Every swimmer who steps into my program isn&apos;t just learning to move through water –
+                            they&apos;re discovering their potential, building unshakeable confidence, and developing
+                            the mindset of a champion that will serve them for life.&quot;
                         </blockquote>
                         <div className="text-cyan-400 font-semibold text-lg">
                             — Coach Alexandra Rivers

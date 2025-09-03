@@ -1,3 +1,4 @@
+// lib/types.ts
 export interface Achievement {
     id: string;
     studentName: string;
@@ -11,9 +12,12 @@ export interface Achievement {
     description?: string;
     personalBest?: boolean;
     recordType?: 'Personal' | 'Club' | 'Regional' | 'National' | 'World';
-  }
-  
-  export interface Testimonial {
+    level: 'local' | 'national' | 'international';
+    result: string;
+    age: number;
+}
+
+export interface Testimonial {
     id: string;
     parentName: string;
     studentName: string;
@@ -24,9 +28,9 @@ export interface Achievement {
     relationship: 'Parent' | 'Student' | 'Former Student';
     featured?: boolean;
     achievements?: string[];
-  }
-  
-  export interface Program {
+}
+
+export interface Program {
     id: string;
     name: string;
     description: string;
@@ -42,9 +46,9 @@ export interface Achievement {
     goals: string[];
     imageUrl?: string;
     featured?: boolean;
-  }
-  
-  export interface Coach {
+}
+
+export interface Coach {
     name: string;
     title: string;
     bio: string;
@@ -55,9 +59,9 @@ export interface Achievement {
     imageUrl?: string;
     specialties: string[];
     languages?: string[];
-  }
-  
-  export interface ContactInfo {
+}
+
+export interface ContactInfo {
     email: string;
     phone: string;
     address: {
@@ -83,31 +87,30 @@ export interface Achievement {
       address: string;
       facilities: string[];
     };
-  }
-  
-  export interface FAQ {
+}
+
+export interface FAQ {
     id: string;
     question: string;
     answer: string;
     category: 'General' | 'Programs' | 'Pricing' | 'Schedule' | 'Requirements';
     featured?: boolean;
-  }
-  
-  export interface Statistic {
+}
+
+export interface Statistic {
     id: string;
     label: string;
     value: string | number;
     description?: string;
-    icon?: React.ComponentType<any>;
+    icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     change?: {
       value: number;
       trend: 'up' | 'down' | 'neutral';
       period: string;
     };
-  }
-  
-  // Additional content-related types
-  export interface NewsItem {
+}
+
+export interface NewsItem {
     id: string;
     title: string;
     summary: string;
@@ -118,9 +121,9 @@ export interface Achievement {
     imageUrl?: string;
     tags: string[];
     featured?: boolean;
-  }
-  
-  export interface Event {
+}
+
+export interface Event {
     id: string;
     title: string;
     description: string;
@@ -132,19 +135,19 @@ export interface Achievement {
     maxParticipants?: number;
     price?: string;
     ageGroups?: string[];
-  }
-  
-  export interface BaseComponentProps {
+}
+
+export interface BaseComponentProps {
     className?: string;
     children?: React.ReactNode;
-  }
-  
-  export interface PageProps {
+}
+
+export interface PageProps {
     params?: { [key: string]: string };
     searchParams?: { [key: string]: string | string[] | undefined };
-  }
-  
-  export interface ContactFormData {
+}
+
+export interface ContactFormData {
     name: string;
     email: string;
     phone?: string;
@@ -153,9 +156,9 @@ export interface Achievement {
     programInterest?: string;
     studentAge?: string;
     experience?: 'Beginner' | 'Intermediate' | 'Advanced';
-  }
-  
-  export interface EnrollmentFormData extends ContactFormData {
+}
+
+export interface EnrollmentFormData extends ContactFormData {
     studentName: string;
     studentAge: string;
     parentName: string;
@@ -165,37 +168,37 @@ export interface Achievement {
     goals: string[];
     preferredProgram: string;
     preferredSchedule: string[];
-  }
-  
-  export interface ApiResponse<T> {
+}
+
+export interface ApiResponse<T> {
     success: boolean;
     data?: T;
     error?: string;
     message?: string;
-  }
-  
-  export interface FilterState {
+}
+
+export interface FilterState {
     category: string;
     year?: number;
     medal?: string;
     searchTerm: string;
-  }
-  
-  export interface ModalState {
+}
+
+export interface ModalState {
     isOpen: boolean;
     type?: 'achievement' | 'testimonial' | 'program' | 'contact';
-    data?: any;
-  }
-  
-  export interface NavigationItem {
+    data?: unknown;
+}
+
+export interface NavigationItem {
     name: string;
     href: string;
-    icon?: React.ComponentType<any>;
+    icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     subItems?: NavigationItem[];
     external?: boolean;
-  }
-  
-  export interface ThemeColors {
+}
+
+export interface ThemeColors {
     primary: string;
     secondary: string;
     accent: string;
@@ -203,16 +206,16 @@ export interface Achievement {
     surface: string;
     text: string;
     textSecondary: string;
-  }
-  
-  export interface Animation {
+}
+
+export interface Animation {
     duration: number;
     delay?: number;
     easing?: string;
     type?: 'spring' | 'tween';
-  }
-  
-  export interface SearchFilters {
+}
+
+export interface SearchFilters {
     query?: string;
     category?: string;
     dateRange?: {
@@ -221,18 +224,18 @@ export interface Achievement {
     };
     sortBy?: 'date' | 'name' | 'relevance';
     sortOrder?: 'asc' | 'desc';
-  }
-  
-  export interface PaginationInfo {
+}
+
+export interface PaginationInfo {
     currentPage: number;
     totalPages: number;
     totalItems: number;
     itemsPerPage: number;
     hasNextPage: boolean;
     hasPrevPage: boolean;
-  }
-  
-  export interface MediaItem {
+}
+
+export interface MediaItem {
     id: string;
     type: 'image' | 'video';
     url: string;
@@ -240,14 +243,13 @@ export interface Achievement {
     alt?: string;
     caption?: string;
     credits?: string;
-  }
-  
-  export interface Gallery {
+}
+
+export interface Gallery {
     id: string;
     title: string;
     description?: string;
     items: MediaItem[];
     category: string;
     featured?: boolean;
-  }
-  
+}

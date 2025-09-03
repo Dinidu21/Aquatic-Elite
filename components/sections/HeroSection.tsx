@@ -1,3 +1,4 @@
+// components/sections/HeroSection.tsx
 'use client';
 
 import { motion } from 'framer-motion';
@@ -92,7 +93,7 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <motion.div
               key={stat.label}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"

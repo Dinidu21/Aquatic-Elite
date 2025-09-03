@@ -1,5 +1,4 @@
 // components/sections/TestimonialsSpotlight.tsx
-
 import React from 'react';
 import Link from 'next/link';
 import { Star, Quote, ArrowRight, User } from 'lucide-react';
@@ -53,7 +52,7 @@ const TestimonialsSpotlight: React.FC = () => {
 
                             {/* Quote */}
                             <blockquote className="text-slate-700 mb-6 leading-relaxed">
-                                "{testimonial.quote}"
+                                &quot;{testimonial.quote}&quot;
                             </blockquote>
 
                             {/* Author Info */}
@@ -65,7 +64,6 @@ const TestimonialsSpotlight: React.FC = () => {
                                     <div>
                                         <div className="font-semibold text-slate-900">{testimonial.parentName}</div>
                                         <div className="text-sm text-slate-600">Parent of {testimonial.studentName}</div>
-                                        {/* Remove studentAge unless you add it later */}
                                     </div>
                                 </div>
                             </div>
